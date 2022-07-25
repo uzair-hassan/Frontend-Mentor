@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://css.gg/shopping-cart.css' rel='stylesheet'>
+    <title>Challenge 1</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');        
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .main{
+            width: 660px;
+            height: 490px;
+            display: flex;
+            flex-direction: row;            
+        }
+        .desc{
+            display: flex;
+            flex-direction: column;            
+            padding: 0 40px;
+            background-color: hsl(0, 0%, 100%);
+            border-radius: 0 10px 10px 0;
+        }
+        .image1{
+            border-radius: 10px 0 0 10px;
+        }
+        .image2{
+            display: none;
+        }
+        .desc>h1, .price>h1{
+            font-family: 'Fraunces', serif;
+        }
+        .desc>h1{
+            width: 200px;
+        }
+        .desc>p{
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+            margin: 30px 0;
+            color: hsl(228, 12%, 48%);
+            width: 180px;
+        }
+        .desc>h2{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            margin: 20px 0;
+            color: hsl(228, 12%, 48%);
+            letter-spacing: 5px;
+        }
+        .price{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            color: hsl(158, 36%, 37%);
+        }
+        .price>h3{
+            margin-left: 15px;
+            font-family: 'Montserrat', sans-serif;          
+            font-size: 15px;
+            color: hsl(228, 12%, 48%);
+        }
+        button{
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+            height: 50px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border: none;
+            background-color: hsl(158, 36%, 37%);
+            color: hsl(0, 0%, 100%);
+            font-weight: 700;
+        }
+        button>i{
+            margin-right: 10px;
+        }
+        button:hover{
+            background-color: hsl(212, 21%, 14%);
+            cursor: pointer;
+        }
+        body{
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 860px;
+            background-color: hsl(30, 38%, 92%);
+        }
+        @media (max-width: 375px) {
+            .main{
+                flex-direction: column;
+                width: 300px;
+                height: 700px;
+            }
+            .image1{
+                display: none;
+            }
+            .image2{
+                display: block;
+                border-radius: 10px 10px 0 0;
+            }
+            .desc{
+                border-radius: 0 0 10px 10px;
+            }
+            button{
+                width: 219px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="image-product-desktop.jpg" alt="" width="340px" height="490px" class="image1">
+        <img src="image-product-mobile.jpg" alt="" width="300px" height="200px" class="image2">
+        <div class="desc">
+            <h2>PERFUME</h2>
+            <h1>Gabrielle Essence Eau De Parfum</h1>
+            <p>A floral, solar and volutuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL</p>
+            <div class="price">
+                <h1>$149.99</h1>
+                <h3><del>$169.99</del></h3>
+            </div>
+            <button>
+                <i class="gg-shopping-cart"></i>
+                Add to Cart
+            </button>
+        </div>        
+    </div>
+</body>
+</html>
